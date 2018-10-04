@@ -1,7 +1,7 @@
 package com.algoritmos;
 
 public class Ciclos {
-	
+	asdasdasd
 	public int potencia (int base, int exponente) {
 		int resultado = 1;
 		for(int i = 0; i<exponente;i++) {
