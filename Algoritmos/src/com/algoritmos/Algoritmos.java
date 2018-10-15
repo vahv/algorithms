@@ -1,7 +1,15 @@
 package com.algoritmos;
 
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.PriorityQueue;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Stack;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class Algoritmos {
 
@@ -9,7 +17,9 @@ public class Algoritmos {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner (System.in);
 		Ciclos ciclo = new Ciclos();
-		/*
+		Arreglos arreglo = new Arreglos();
+		Archivos archivo = new Archivos();
+		/* array de tamaño 10 con numeros aleaorios
 		int base = 0;
 		int exponente = 0;
 		
@@ -80,11 +90,123 @@ public class Algoritmos {
 //			System.out.println(condicional.adivinarNumero(secretNumber,guessingNumber));
 //		}while(guessingNumber != secretNumber);
 		
-		int size = 0;
-		System.out.println("Ingresa el tamanio del cuadrado");
-		size = sc.nextInt();
-		ciclo.drawSquare(size);
+//		int size = 0;
+//		System.out.println("Ingresa el tamanio del cuadrado");
+//		size = sc.nextInt();
+//		ciclo.drawSquare(size);
+//		int[] numbers = arreglo.generarLista();
+//		String[] months = arreglo.converToMonths(numbers);
+//		
+//		for(int i = 0;i<12;i++)
+//			System.out.print(numbers[i]+" ");
+//		
+//		System.out.println("");
+//		
+//		for(int i = 0;i<12;i++)
+//			System.out.print(months[i]+" ");
+		
+//		ArrayList<Integer> fibbonacci = new ArrayList<Integer>();
+//		Integer fibboN = 0;
+//		System.out.println("Give me fibbo n");
+//		fibbonacci = arreglo.fibonacci(sc.nextInt());
+//		Iterator iterator = fibbonacci.iterator();
+//		while(iterator.hasNext())
+//			System.out.print(iterator.next()+" ");
+		
+//		Stack pila = new Stack();
+//		pila.push(1);
+//		pila.push(2);
+//		pila.push(3);
+//		pila.push(4);
+//		pila.push(5);
+//		System.out.println("Ver ultimo elemento con peek: "+pila.peek());
+//		System.out.println("Extraer ultimo elemento con pop: "+pila.pop());
+//		System.out.println("Ver ultimo elemento con peek: "+pila.peek());
+//		System.out.println("Agregar un elemento con push: pila.push(6)");
+//		pila.push(6);
+//		System.out.println("Ver ultimo elemento con peek: "+pila.peek());
+		
+//		PriorityQueue<String> queue = new PriorityQueue<String>();
+//		queue.add("zoo");
+//		queue.add("Abe");
+//		queue.add("master");
+//		queue.add("Regi");
+//		Iterator iteratos = queue.iterator();
+//		
+//		while(iteratos.hasNext())
+//			System.out.print(iteratos.next()+" ");
+//		System.out.println("\nRevisar el primer elemento: "+queue.peek());
+//		System.out.println("Extraer el primer elemento: "+queue.poll());
+//		System.out.println("Cola contiene Abe? "+queue.contains("Abe"));
+//		System.out.println("Cola contiene Abe? "+queue.contains("zoo"));
+//		System.out.println("Remover zoo: "+queue.remove("zoo"));
+		
+//		TreeSet<String> tree = new TreeSet<String>();
+//		tree.add("Red");
+//		tree.add("Chrome");
+//		tree.add("Purple");
+//		tree.add("White");
+//		tree.add("Orange");
+//		Iterator iterator = tree.iterator();
+//		while(iterator.hasNext())
+//			System.out.print(iterator.next()+" ");
+//		System.out.println("\nSe agergo Red: "+tree.add("Red"));
+//		System.out.println("Se agrego Pink: "+tree.add("Pink"));
+//		System.out.println("Se removio Chrome: "+tree.remove("Chrome"));
+//		iterator = tree.iterator();
+//		while(iterator.hasNext())
+//			System.out.print(iterator.next()+" ");
+		
+//		Hashtable<Integer,String> hash = new Hashtable<Integer,String>();
+//		hash.put(1, "Red");
+//		hash.put(2, "Violet");
+//		hash.put(3, "Aquamerine");
+//		Enumeration<Integer> en = hash.keys();
+//		while(en.hasMoreElements()) {
+//			Integer key = (Integer) en.nextElement();
+//			System.out.println("Clave:"+key+" Element:"+hash.get(key));
+//		}
+//		System.out.println("Se agrego 3:Red? "+hash.put(3, "Red"));
+//		System.out.println("Se agrego 5:Red? "+hash.put(3, "Red"));
+//		System.out.println("Contiene elemento con llave 5? "+hash.containsKey(5));
+//		System.out.println("Elemento con llave 3:"+hash.get(3));
+	
+//		TreeMap<String, Integer> treeMap = new TreeMap<String,Integer>();
+//		treeMap.put("Blue", 1);
+//		treeMap.put("Purple", 2);
+//		Iterator iterator = treeMap.keySet().iterator();
+//		while(iterator.hasNext()) {
+//			String key = (String) iterator.next();
+//			System.out.println(key+":"+treeMap.get(key));
+//		}
+		
+//		int[] array = {0,1,2,3,4,5,6,7,8,9};
+//		int[] result = arreglo.recorrerIndex(array);
+//		for(int element : result)
+//			System.out.print(element+" ");
+//		
+//		String directory = "C:\\read.txt";
+//		String text = archivo.readFile(directory);
+//		System.out.println(text);
+		
+//		String directory = "C:\\Users\\VictorAbel\\Desktop\\write.txt";
+//		String contenido = "Y la chona se mueve, y la gente le grita\r\n" + 
+//				"No hay mejor que la chona, para la quebradita\r\n" + 
+//				"Y la chona se mueve, al ritmo que le toquen\r\n" + 
+//				"Ella baila de todo, nunca pierde su trote\r\n" + 
+//				"\"Y gozamelo digamos\"\r\n" + 
+//				"Contare la historia de una famosa persona\r\n" + 
+//				"Todos la conocen con el apodo de chona\r\n" + 
+//				"Todos la conocen con el apodo de chona";
+//		archivo.escribir(directory, contenido);
+//		System.out.println(archivo.readFile(directory));
+		
+		String directory = "C:\\Users\\VictorAbel\\Desktop\\write.txt";
+		String text = archivo.readFile(directory);
+		String contenido = archivo.replaceVowels(text);
+		archivo.escribir(directory, contenido);
+		
+		
 	}
 	
-
 }

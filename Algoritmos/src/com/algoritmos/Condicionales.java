@@ -57,13 +57,10 @@ public class Condicionales {
 		return horas+":"+minutos+":"+segundos;
 	}
 	public String adivinarNumero(int secretNumber, int guessingNumber) {
-		if (guessingNumber == secretNumber)
-			return "Adivinaste!";
-		else if (guessingNumber > secretNumber)
-			return "Es menor";
-		else if (guessingNumber < secretNumber)
-			return "Es mayor";
-		
-		else return "Error";
+		return (guessingNumber > secretNumber) ? "Es menor"
+				:(guessingNumber < secretNumber)? "Es mayor"
+						:"Adivinaste!";
 	}
+	
+	
 }
